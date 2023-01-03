@@ -1,17 +1,6 @@
 
-<p align="center">
-  <a href="https://github.com/rialms" class="rich-diff-level-one">
-    <img src="https://github-readme-stats.vercel.app/api?username=rialms&title_color=333&text_color=777" alt="Rokibul's Stats" >
-    <!-- &hide=issues
-    <img src="https://github-readme-stats.vercel.app/api?username=rialms&hide=issues&title_color=333&text_color=777" alt="Rokibul's Stats" >
-    -->
-  </a>
-</p>
 
-
- 
-
- ![Visitors](https://visitor-badge.glitch.me/badge?page_id=techjuliana&left_color=green&right_color=red)
+ ![Visitors](https://visitor-badge.glitch.me/badge?page_id=rialms&left_color=green&right_color=red)
 
  
  <hr>
