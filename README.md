@@ -10,6 +10,8 @@
   <a href="https://github.com/rialms">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rialms&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rialms&layout=compact&langs_count=7&theme=dracula"/>
+   
+    [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=rialms&theme=dark)] 
 </div>
 
- [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=rialms&theme=dark)] 
+
