@@ -7,9 +7,7 @@
   
    <p>
 
-<img width="500" src="https://metrics.lecoq.io/rokibulroni" alt="Github Metrics">
-  
-<br>
+
 
 </p>
 
