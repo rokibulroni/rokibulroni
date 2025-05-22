@@ -1,0 +1,43 @@
+name: Archive All Pages to Wayback Machine
+
+on:
+schedule:
+    - cron: '0 0 * * *'   # 08:00 SG/MY time
+    - cron: '0 8 * * *'   # 16:00 SG/MY time
+    - cron: '0 16 * * *'  # 00:00 SG/MY time (next day)
+  workflow_dispatch:
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Python and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Fetch sitemap and archive URLs
+        run: |
+          import requests
+          from bs4 import BeautifulSoup
+
+          sitemap_url = "https://rokibulroni.com/sitemap-0.xml"
+          archive_url = "https://web.archive.org/save/"
+
+          print("Fetching sitemap...")
+          response = requests.get(sitemap_url)
+          soup = BeautifulSoup(response.content, 'xml')
+          urls = [loc.text for loc in soup.find_all("loc")]
+
+          print(f"Found {len(urls)} URLs in sitemap.")
+          for url in urls:
+              print(f"Archiving {url}")
+              try:
+                  r = requests.get(archive_url + url)
+                  print(f"Status: {r.status_code}")
+              except Exception as e:
+                  print(f"Failed to archive {url}: {e}")
+        shell: python
