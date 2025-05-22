@@ -48,10 +48,33 @@
 
 ## 💡 Who Am I?
 
-- 🎓 Cybersecurity Specialist
-- 💼 6+ Years experience in cybersecurity
-- 🛠️ Specialties: Digital Forensics, Pen Testing, SOC Analysis
-- 💻 Tech stack: Python, Bash, Linux, Wireshark, Burp Suite, Metasploit
+🧑‍💻 **Cybersecurity Specialist** with **6+ years** of experience delivering secure, resilient, and scalable solutions across threat landscapes.
+
+
+#### 🔐 **Security Solutions & Platforms**
+
+`WAZUH`, `Splunk`, `LogRhythm`, `Cortex XDR`, `Trend Micro XDR`,
+`Symantec`, `Apex One`, `ESET PROTECT`, `CyberArk`, `BeyondTrust`,
+`ARCON`, `ManageEngine PMP`, `Veeam`, `Acronis Cyber Protect`, `BDR Suite`,
+`Mimecast`, `Barracuda`, `Symantec (Email Security)`, `Radware DefensePro`,
+`Cloudflare DDoS`, `Trend Micro Deep Security`, `Sophos Central`
+
+#### ✅ **Core Cybersecurity Skills**
+
+`Penetration Testing`, `Vulnerability Assessment`, `Threat Detection & Analysis`,
+`Incident Response & Handling`, `Cyber Threat Intelligence (CTI)`,
+`Risk Assessment & Mitigation`, `Security Policy Development`,
+`Security Awareness Training`, `Security Monitoring`,
+`Compliance & Regulatory Standards`, `Security Auditing`,
+`Security Architecture Design`, `Data Loss Prevention (DLP)`, `Cloud Security`
+
+#### 💻 **Tools & Environments**
+
+`SIEM Platforms`, `IDS/IPS Systems`, `Kali Linux`, `Metasploit`, `Nmap`,
+`Wireshark`, `Linux/Unix System Hardening`, `Firewall Configuration`, `Proxy Configuration`
+
+
+
 
 ---
 
