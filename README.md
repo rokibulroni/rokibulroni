@@ -1,36 +1,67 @@
-
- 
- <div>
-<div align="center">
-  <a href="https://rokibulroni.com/">
- 
-  
-   <p>
-
-
-
+<h1 align="center">Hey 👋, I'm Rokibul Islam Roni</h1>
+<p align="center">
+  <img src="img/profile1.gif" width="150" alt="Roni's Avatar" />
+</p>
+<p align="center">
+  🔐 Cybersecurity Engineer | 🧪 Digital Forensics | 🛡️ Red/Blue Teamer
+</p>
+<p align="center">
+  <a href="https://rokibulroni.com">🌐 Portfolio</a> • 
+  <a href="https://linkedin.com/in/rokibulroni">LinkedIn</a> • 
+  <a href="mailto:hi@rokibulroni.com">Email</a>
 </p>
 
-<br>
+---
 
-|![](https://github-readme-stats.vercel.app/api?username=rokibulroni&&show_icons=true&title_color=ffffff&icon_color=bb2acf&text_color=daf7dc&bg_color=151515)|![](https://github-readme-stats.vercel.app/api/top-langs/?username=rokibulroni&layout=compact&theme=tokyonight&langs_count=10)|
-|-|-|
+## 🏆 GitHub Trophy
 
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=rokibulroni&theme=monokai&row=1&no-bg=true" />
+</p>
 
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=rokibulroni&theme=dark"/>
+---
 
-![](https://activity-graph.herokuapp.com/graph?username=rokibulroni&theme=redical)
+## 🔥 GitHub Streak
 
-![snake](https://raw.githubusercontent.com/rokibulroni/rokibulroni/output/github-contribution-grid-snake.svg)
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=rokibulroni&theme=tokyonight&hide_border=true" />
+</p>
 
-<br>
-<p align="center"><p align="center"> <img src="https://komarev.com/ghpvc/?username=rokibulroni" alt="blueedge"/> </p>  </p>
-<br>
+---
 
+## 📊 GitHub Stats
 
-   
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=rokibulroni&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rokibulroni&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+</p>
+
+---
+
+## 🌍 Contributions
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rokibulroni&theme=tokyo-night&hide_border=true" />
+</p>
+
+---
+
+## 💡 Who Am I?
+
+- 🎓 Cybersecurity Specialist
+- 💼 6+ Years experience in cybersecurity
+- 🛠️ Specialties: Digital Forensics, Pen Testing, SOC Analysis
+- 💻 Tech stack: Python, Bash, Linux, Wireshark, Burp Suite, Metasploit
+
+---
 
 
  
+---
 
+## 📫 Let's Connect
+
+<p align="center">
+  <a href="https://rokibulroni.com"><img src="https://img.shields.io/badge/Visit-My_Site-blue?style=for-the-badge" /></a>
+  <a href="https://linkedin.com/in/rokibulroni"><img src="https://img.shields.io/badge/LinkedIn-Rokibul-blue?style=for-the-badge&logo=linkedin" /></a>
+</p>
