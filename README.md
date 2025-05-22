@@ -1,8 +1,5 @@
 <h1 align="center">Hey 👋, I'm Rokibul Islam Roni</h1>
 <p align="center">
-  <img src="img/profile1.gif" width="150" alt="Roni's Avatar" />
-</p>
-<p align="center">
   🔐 Cybersecurity Specialist | 🧪 Digital Forensics | 🛠️ Pentester | 🛡️ Blue Teamer
 </p>
 <p align="center">
