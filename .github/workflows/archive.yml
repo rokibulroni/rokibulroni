@@ -1,43 +1,95 @@
-name: Archive All Pages to Wayback Machine
+name: Archive Individual URLs to Wayback Machine (3x Daily)
 
 on:
-schedule:
-    - cron: '0 0 * * *'   # 08:00 SG/MY time
-    - cron: '0 8 * * *'   # 16:00 SG/MY time
-    - cron: '0 16 * * *'  # 00:00 SG/MY time (next day)
+  schedule:
+    - cron: '0 0 * * *'   # 08:00 SG/MY
+    - cron: '0 8 * * *'   # 16:00 SG/MY
+    - cron: '0 16 * * *'  # 00:00 SG/MY (next day)
   workflow_dispatch:
 
 jobs:
   archive:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install Python and dependencies
+      - name: Archive URLs via Wayback Machine
         run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          urls=(
+            "https://rokibulroni.com"
+            "https://rokibulroni.com/about"
+            "https://rokibulroni.com/blog"
+            "https://rokibulroni.com/blog/2"
+            "https://rokibulroni.com/blog/3"
+            "https://rokibulroni.com/blog/4"
+            "https://rokibulroni.com/blog/a-beginners-guide-to-penetration-testing"
+            "https://rokibulroni.com/blog/access-cloudflare-on-gmail"
+            "https://rokibulroni.com/blog/ai-in-cybersecurity"
+            "https://rokibulroni.com/blog/blog-holiday-cybersecurity-guide"
+            "https://rokibulroni.com/blog/bug-bounty"
+            "https://rokibulroni.com/blog/career-roadmaps"
+            "https://rokibulroni.com/blog/change-linux-pwd"
+            "https://rokibulroni.com/blog/cybercriminals-target-domain"
+            "https://rokibulroni.com/blog/cybersecurity-career"
+            "https://rokibulroni.com/blog/cybersecurity-trends"
+            "https://rokibulroni.com/blog/debian-lab-setup-for-cyber-security-enthusiast"
+            "https://rokibulroni.com/blog/digital-forensics"
+            "https://rokibulroni.com/blog/digital-forensics-artifacts-repository"
+            "https://rokibulroni.com/blog/email-spoof-code"
+            "https://rokibulroni.com/blog/endpoint-security"
+            "https://rokibulroni.com/blog/essential-tools-for-privacy-in-daily-life"
+            "https://rokibulroni.com/blog/fido2-passkeys-modern-authentication-2025"
+            "https://rokibulroni.com/blog/home-web-server-rpi"
+            "https://rokibulroni.com/blog/lab"
+            "https://rokibulroni.com/blog/learn-security"
+            "https://rokibulroni.com/blog/learn-security/2"
+            "https://rokibulroni.com/blog/linux-permission"
+            "https://rokibulroni.com/blog/mac-forensics"
+            "https://rokibulroni.com/blog/network-security"
+            "https://rokibulroni.com/blog/open-source-operating-system"
+            "https://rokibulroni.com/blog/penetration-testing"
+            "https://rokibulroni.com/blog/penetration-testing-career-in-malaysia-and-singapore"
+            "https://rokibulroni.com/blog/pi-hole-network-security"
+            "https://rokibulroni.com/blog/portable-file-server"
+            "https://rokibulroni.com/blog/prosody-xmpp"
+            "https://rokibulroni.com/blog/raspberrypi-vpn"
+            "https://rokibulroni.com/blog/samba-server"
+            "https://rokibulroni.com/blog/secure-ssh-server"
+            "https://rokibulroni.com/blog/self-hosting-lemmy"
+            "https://rokibulroni.com/blog/server-management"
+            "https://rokibulroni.com/blog/siem-vs-soar-which-one-you-need"
+            "https://rokibulroni.com/blog/social-engineering"
+            "https://rokibulroni.com/blog/sqlmap-usage"
+            "https://rokibulroni.com/blog/threat-intelligence"
+            "https://rokibulroni.com/blog/threema-in-a-decentralized-environment"
+            "https://rokibulroni.com/blog/time-to-retire-sms-otps"
+            "https://rokibulroni.com/blog/top-10-cybersecurity-threats-to-watch-2024"
+            "https://rokibulroni.com/blog/top-linux-distro"
+            "https://rokibulroni.com/blog/top-virtual-machine"
+            "https://rokibulroni.com/blog/va-in-large-scale-enterprise-networks"
+            "https://rokibulroni.com/blog/waf"
+            "https://rokibulroni.com/blog/wifi-relay-any-router"
+            "https://rokibulroni.com/contact"
+            "https://rokibulroni.com/lib"
+            "https://rokibulroni.com/work"
+            "https://rokibulroni.com/work/compliance"
+            "https://rokibulroni.com/work/consulting"
+            "https://rokibulroni.com/work/custom-website"
+            "https://rokibulroni.com/work/cybersecurity"
+            "https://rokibulroni.com/work/cybersecurity-compliance-audit"
+            "https://rokibulroni.com/work/device-security-assessment"
+            "https://rokibulroni.com/work/incident-response"
+            "https://rokibulroni.com/work/mobile-security"
+            "https://rokibulroni.com/work/product-design"
+            "https://rokibulroni.com/work/ransomware-attack"
+            "https://rokibulroni.com/work/risk-assessment"
+            "https://rokibulroni.com/work/risk-management"
+            "https://rokibulroni.com/work/risk-mitigation"
+            "https://rokibulroni.com/work/security"
+            "https://rokibulroni.com/work/zero-day-exploit-response"
+            "https://rokibulroni.com/work/zero-day-exploits"
+          )
 
-      - name: Fetch sitemap and archive URLs
-        run: |
-          import requests
-          from bs4 import BeautifulSoup
-
-          sitemap_url = "https://rokibulroni.com/sitemap-0.xml"
-          archive_url = "https://web.archive.org/save/"
-
-          print("Fetching sitemap...")
-          response = requests.get(sitemap_url)
-          soup = BeautifulSoup(response.content, 'xml')
-          urls = [loc.text for loc in soup.find_all("loc")]
-
-          print(f"Found {len(urls)} URLs in sitemap.")
-          for url in urls:
-              print(f"Archiving {url}")
-              try:
-                  r = requests.get(archive_url + url)
-                  print(f"Status: {r.status_code}")
-              except Exception as e:
-                  print(f"Failed to archive {url}: {e}")
-        shell: python
+          for url in "${urls[@]}"; do
+            echo "Archiving $url"
+            curl -s "https://web.archive.org/save/$url"
+          done
