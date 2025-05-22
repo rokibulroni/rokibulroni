@@ -3,7 +3,7 @@
   <img src="img/profile1.gif" width="150" alt="Roni's Avatar" />
 </p>
 <p align="center">
-  🔐 Cybersecurity Engineer | 🧪 Digital Forensics | 🛡️ Red/Blue Teamer
+  🔐 Cybersecurity Specialist | 🧪 Digital Forensics | 🛠️ Pentester | 🛡️ Blue Teamer
 </p>
 <p align="center">
   <a href="https://rokibulroni.com">🌐 Portfolio</a> • 
