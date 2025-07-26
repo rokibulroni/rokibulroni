@@ -2,7 +2,7 @@ name: Archive Individual URLs to Wayback Machine (3x Daily)
 
 on:
   schedule:
-    - cron: '0 0 1-31/3 * *'
+    - cron: '0 0 1,16 * *'
   workflow_dispatch:
 
 jobs:
