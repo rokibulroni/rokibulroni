@@ -1,0 +1,110 @@
+import { Card } from "../src/card.ts";
+import { CONSTANTS, parseParams } from "../src/utils.ts";
+import { COLORS, Theme } from "../src/theme.ts";
+import "https://deno.land/x/dotenv@v0.5.0/load.ts";
+import { staticRenderRegeneration } from "../src/StaticRenderRegeneration/index.ts";
+import { GithubRepositoryService } from "../src/Repository/GithubRepository.ts";
+import { GithubApiService } from "../src/Services/GithubApiService.ts";
+import { ServiceError } from "../src/Types/index.ts";
+import { ErrorPage } from "../src/pages/Error.ts";
+import { cacheProvider } from "../src/config/cache.ts";
+
+const serviceProvider = new GithubApiService();
+const client = new GithubRepositoryService(serviceProvider).repository;
+
+// Build cache control header with optimized caching strategy
+const cacheControlHeader = [
+  "public",
+  `max-age=${CONSTANTS.CACHE_MAX_AGE}`,
+  `s-maxage=${CONSTANTS.CDN_CACHE_MAX_AGE}`,
+  `stale-while-revalidate=${CONSTANTS.STALE_WHILE_REVALIDATE}`,
+].join(", ");
+
+const defaultHeaders = new Headers(
+  {
+    "Content-Type": "image/svg+xml",
+    "Cache-Control": cacheControlHeader,
+  },
+);
+
+export default (request: Request) =>
+  staticRenderRegeneration(request, {
+    revalidate: CONSTANTS.REVALIDATE_TIME,
+    headers: defaultHeaders,
+  }, function (req: Request) {
+    return app(req);
+  });
+
+async function app(req: Request): Promise<Response> {
+  const params = parseParams(req);
+  const username = "rokibulroni"; // Always force the username to be rokibulroni
+  const row = params.getNumberValue("row", CONSTANTS.DEFAULT_MAX_ROW);
+  const column = params.getNumberValue("column", CONSTANTS.DEFAULT_MAX_COLUMN);
+  const themeParam: string = params.getStringValue("theme", "default");
+  let theme: Theme = COLORS.default;
+  if (Object.keys(COLORS).includes(themeParam)) {
+    theme = COLORS[themeParam];
+  }
+  const marginWidth = params.getNumberValue(
+    "margin-w",
+    CONSTANTS.DEFAULT_MARGIN_W,
+  );
+  const paddingHeight = params.getNumberValue(
+    "margin-h",
+    CONSTANTS.DEFAULT_MARGIN_H,
+  );
+  const noBackground = params.getBooleanValue(
+    "no-bg",
+    CONSTANTS.DEFAULT_NO_BACKGROUND,
+  );
+  const noFrame = params.getBooleanValue(
+    "no-frame",
+    CONSTANTS.DEFAULT_NO_FRAME,
+  );
+  const titles: Array<string> = params.getAll("title").flatMap((r) =>
+    r.split(",")
+  ).map((r) => r.trim());
+  const ranks: Array<string> = params.getAll("rank").flatMap((r) =>
+    r.split(",")
+  ).map((r) => r.trim());
+
+  const userKeyCache = ["v1", username].join("-");
+  const userInfoCached = await cacheProvider.get(userKeyCache) || "{}";
+  let userInfo = JSON.parse(userInfoCached);
+  const hasCache = !!Object.keys(userInfo).length;
+
+  if (!hasCache) {
+    const userResponseInfo = await client.requestUserInfo(username);
+    if (userResponseInfo instanceof ServiceError) {
+      return new Response(
+        ErrorPage({ error: userResponseInfo }).render(),
+        {
+          status: userResponseInfo.code,
+          headers: new Headers({
+            "Content-Type": "text/html",
+            "Cache-Control": cacheControlHeader,
+          }),
+        },
+      );
+    }
+    userInfo = userResponseInfo;
+    await cacheProvider.set(userKeyCache, JSON.stringify(userInfo));
+  }
+  // Success Response
+  return new Response(
+    new Card(
+      titles,
+      ranks,
+      column,
+      row,
+      CONSTANTS.DEFAULT_PANEL_SIZE,
+      marginWidth,
+      paddingHeight,
+      noBackground,
+      noFrame,
+    ).render(userInfo, theme),
+    {
+      headers: defaultHeaders,
+    },
+  );
+}
