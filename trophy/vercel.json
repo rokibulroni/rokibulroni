@@ -2,7 +2,7 @@
   "public": true,
   "functions": {
     "api/**/*.[jt]s": {
-      "runtime": "vercel-deno@latest",
+      "runtime": "vercel-deno@3.2.0",
       "maxDuration": 5
     }
   },
