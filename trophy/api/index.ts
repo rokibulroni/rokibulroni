@@ -27,13 +27,16 @@ const defaultHeaders = new Headers(
   },
 );
 
-export default (request: Request) =>
-  staticRenderRegeneration(request, {
-    revalidate: CONSTANTS.REVALIDATE_TIME,
-    headers: defaultHeaders,
-  }, function (req: Request) {
-    return app(req);
-  });
+export default {
+  fetch(request: Request) {
+    return staticRenderRegeneration(request, {
+      revalidate: CONSTANTS.REVALIDATE_TIME,
+      headers: defaultHeaders,
+    }, function (req: Request) {
+      return app(req);
+    });
+  }
+};
 
 async function app(req: Request): Promise<Response> {
   const params = parseParams(req);
