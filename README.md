@@ -10,13 +10,11 @@
 
 ---
 
-<!-- 
 ## 🏆 GitHub Trophy
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=rokibulroni&theme=monokai&row=1&no-bg=true&v=1" />
+  <img src="https://trophy.rokibulroni.deno.net/?theme=monokai&row=1&no-bg=true" />
 </p>
--->
 
 ---
 
