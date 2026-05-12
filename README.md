@@ -16,7 +16,7 @@
 
 ## About / What I Do
 
-- Cybersecurity specialist with 6+ years of experience building secure, resilient systems.
+- Build and operate secure, resilient systems across enterprise and cloud environments.
 - Focused on penetration testing, incident response, digital forensics, and threat detection.
 - Experienced in enterprise security operations, hardening, risk mitigation, and compliance.
 
@@ -55,7 +55,7 @@
 ### 🏆 Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=rokibulroni&theme=monokai&row=1&column=7&no-frame=true&no-bg=true&margin-w=8" alt="GitHub profile trophies for Rokibul Islam Roni" />
+  <img src="https://github-profile-trophy.vercel.app/?username=rokibulroni&theme=monokai&row=1&no-frame=true&no-bg=true&margin-w=8" alt="GitHub profile trophies for Rokibul Islam Roni" />
 </p>
 
 ### 📊 Top Languages
@@ -73,7 +73,7 @@
 **Widget fallback badges (if external widgets are temporarily unavailable):**
 
 ![GitHub followers](https://img.shields.io/github/followers/rokibulroni?style=flat&logo=github)
-![GitHub stars](https://img.shields.io/github/stars/rokibulroni/rokibulroni?style=flat&logo=github)
+![GitHub Profile](https://img.shields.io/badge/GitHub-Profile-181717?style=flat&logo=github&logoColor=white)
 
 ## Featured Projects
 
