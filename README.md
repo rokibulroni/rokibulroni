@@ -13,15 +13,16 @@
 ## 🏆 GitHub Trophy
 
 <p align="center">
-  <img src="https://trophy.rokibulroni.deno.net/?theme=monokai&row=1&no-bg=true" />
+  <img src="https://github-profile-trophy.vercel.app/?username=rokibulroni&theme=monokai&row=1&column=7&no-frame=true&no-bg=true" alt="GitHub Trophies" />
 </p>
 
 ---
-  
+
 ## 📊 GitHub Stats
 
 <p align="center">
-   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rokibulroni&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api?username=rokibulroni&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rokibulroni&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="Top Languages" />
 </p>
 
 ---
@@ -29,7 +30,7 @@
 ## 🌍 Contributions
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rokibulroni&theme=tokyo-night&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rokibulroni&bg_color=1a1b27&color=70a5fd&line=38bdae&point=ffffff&area=true&hide_border=true" alt="Contribution Graph" />
 </p>
 
 ---
@@ -37,7 +38,6 @@
 ## 💡 Who Am I?
 
 🧑‍💻 **Cybersecurity Specialist** with **6+ years** of experience delivering secure, resilient, and scalable solutions across threat landscapes.
-
 
 #### 🔐 **Security Solutions & Platforms**
 
@@ -61,18 +61,11 @@
 `SIEM Platforms`, `IDS/IPS Systems`, `Kali Linux`, `Metasploit`, `Nmap`,
 `Wireshark`, `Linux/Unix System Hardening`, `Firewall Configuration`, `Proxy Configuration`
 
-
-
-
----
-
-
- 
 ---
 
 ## 📫 Let's Connect
 
 <p align="center">
-  <a href="https://rokibulroni.com"><img src="https://img.shields.io/badge/Visit-My_Site-blue?style=for-the-badge" /></a>
-  <a href="https://linkedin.com/in/rokibulroni"><img src="https://img.shields.io/badge/LinkedIn-Rokibul-blue?style=for-the-badge&logo=linkedin" /></a>
+  <a href="https://rokibulroni.com"><img src="https://img.shields.io/badge/Visit-My_Site-blue?style=for-the-badge" alt="Visit My Site" /></a>
+  <a href="https://linkedin.com/in/rokibulroni"><img src="https://img.shields.io/badge/LinkedIn-Rokibul-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" /></a>
 </p>
